@@ -6,16 +6,21 @@ namespace NarrativeProject.Rooms
     {
 
         internal override string CreateDescription() =>
-@"You are in your bedroom.
+@"You are in a bedroom.The room is shrouded in darkness.
+There's a [window] , with only faint moonlight piercing through the curtains of it.
 The [door] in front of you leads to your living room.
-Your private [bathroom] is to your left.
-From your closet, you see the [attic].
+A private [bathroom] is to your left.
+From the closet, you see a staircase leading to the [attic].
 ";
 
         internal override void ReceiveChoice(string choice)
         {
             switch (choice)
             {
+                case "window":
+                    Console.WriteLine("You stand in the moonlight filtering through the window, feeling a sense of calm.");
+                    Player.IncreaseSanity(10); // Increase sanity by 10 when standing in light
+                    break;
                 case "bathroom":
                     Console.WriteLine("You enter the bathroom.");
                     Game.Transition<Bathroom>();
@@ -27,8 +32,8 @@ From your closet, you see the [attic].
                     }
                     else
                     {
-                        Console.WriteLine("You open the door with the key and leave your bedroom.");
-                        Game.Finish();
+                        Console.WriteLine("You open the door with the key and enter the Living Room.");
+                        Game.Transition<LivingRoom>();
                     }
                     break;
                 case "attic":

@@ -6,8 +6,8 @@ namespace NarrativeProject.Rooms
     {
 
         internal override string CreateDescription() =>
-@"In your bathroom, the [bath] is filled with hot water.
-The [mirror] in front of you reflects your depressed face.
+@"In the bathroom, there's a [cabinet] with sanity pills in it.
+The [mirror] in front of you reflects your pale face.
 You can return to your [bedroom].
 ";
 
@@ -15,11 +15,12 @@ You can return to your [bedroom].
         {
             switch (choice)
             {
-                case "bath":
-                    Console.WriteLine("You relax in the bath.");
+                case "cabinet":
+                    Console.WriteLine("You take the sanity pills.");
+                    Player.IncreaseSanity(10);
                     break;
                 case "mirror":
-                    Console.WriteLine("You see the numbers 2314 written on the fog on your mirror.");
+                    Console.WriteLine("You see the numbers 1378 written on the fog on your mirror.");
                     break;
                 case "bedroom":
                     Console.WriteLine("You return to your bedroom.");

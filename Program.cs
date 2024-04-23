@@ -11,6 +11,10 @@ namespace NarrativeProject
             game.Add(new Bedroom());
             game.Add(new Bathroom());
             game.Add(new AtticRoom());
+            game.Add(new LivingRoom());
+            game.Add(new Kitchen());
+            game.Add(new Yard());
+            game.Add(new OfficeRoom());
 
             while (!game.IsGameOver())
             {

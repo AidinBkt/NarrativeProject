@@ -8,10 +8,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>NarrativeProject</RootNamespace>
     <AssemblyName>NarrativeProject</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataContractAttribute.cs" />
+    <Compile Include="DataContractJsonSerializer.cs" />
+    <Compile Include="DataMemberAttribute.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -50,6 +54,10 @@
     <Compile Include="Rooms\AtticRoom.cs" />
     <Compile Include="Rooms\Bathroom.cs" />
     <Compile Include="Rooms\Bedroom.cs" />
+    <Compile Include="Rooms\Yard.cs" />
+    <Compile Include="Rooms\Kitchen.cs" />
+    <Compile Include="Rooms\LivingRoom.cs" />
+    <Compile Include="Rooms\OfficeRoom.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
